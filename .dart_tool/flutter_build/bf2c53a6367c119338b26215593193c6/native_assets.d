@@ -1,0 +1,1 @@
+ C:\\Users\\Tolu\\StudioProjects\\food_shop\\.dart_tool\\flutter_build\\bf2c53a6367c119338b26215593193c6\\native_assets.yaml: 
