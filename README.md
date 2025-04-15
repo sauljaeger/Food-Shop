@@ -1,7 +1,5 @@
-<<<<<<< HEAD
-version https://git-lfs.github.com/spec/v1
-oid sha256:d99a95b2a107d09b0a944f4edf3709ba5d2cf183e6f332b7ff5c84a9a5fb62fd
-size 72
+
+
 =======
 # food_shop
 
