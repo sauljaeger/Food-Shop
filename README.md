@@ -18,4 +18,3 @@ A new Flutter project showing my skill level in flutter
 
 
 
->>>>>>> ba8cf3ff4f7c263467d275fe170d8355c46086c1
