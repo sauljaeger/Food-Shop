@@ -1,10 +1,10 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:food_shop/components/bottom_nav_bar.dart';
 import 'package:food_shop/models/food.dart';
 import 'package:food_shop/pages/cart.dart';
 import 'package:food_shop/pages/intropage.dart';
 import 'package:food_shop/pages/shop.dart';
-
 
 class Homepage extends StatefulWidget {
   const Homepage({super.key});
@@ -26,6 +26,13 @@ class _HomepageState extends State<Homepage> {
     shop(),
     Cart(),
   ];
+
+  final user = FirebaseAuth.instance.currentUser!;
+  //sign out
+  void signUserOut() {
+    FirebaseAuth.instance.signOut();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -40,6 +47,14 @@ class _HomepageState extends State<Homepage> {
             color: Colors.black,
           );
         }),
+        actions: [
+          IconButton(
+              onPressed: signUserOut,
+              icon: Icon(
+                Icons.login,
+                color: Colors.black,
+              ))
+        ],
       ),
       drawer: Drawer(
         backgroundColor: Colors.green[500],
@@ -89,7 +104,8 @@ class _HomepageState extends State<Homepage> {
             ),
 
             GestureDetector(
-              onTap: ()=> Navigator.push(context, MaterialPageRoute(builder: (context) => Intropage())),
+              onTap: () => Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => Intropage())),
               child: const Padding(
                 //wrapping the intial parts in another column and spacebtw
                 padding: const EdgeInsets.only(left: 8.0, bottom: 20),

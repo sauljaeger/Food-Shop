@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_shop/pages/auth_page.dart';
 import 'package:food_shop/pages/homepage.dart';
 
 class Intropage extends StatelessWidget {
@@ -35,7 +36,7 @@ class Intropage extends StatelessWidget {
             ),
             GestureDetector(
               onTap: () => Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => Homepage())),
+                  context, MaterialPageRoute(builder: (context) => AuthPage())),
               child: Padding(
                 padding: const EdgeInsets.all(15.0),
                 child: Container(
